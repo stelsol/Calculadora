@@ -6,7 +6,7 @@ Projeto desenvolvido com o objetivo de praticar e aprimorar conhecimentos em des
 
 Teste a aplicação através do link abaixo:
 
-🔗 **Deploy:** https://stelsol.github.io/Calculadora/index.html
+🔗 **Deploy:** https://stelsol.github.io/Calculadora/
 
 ## 📌 Status
 
