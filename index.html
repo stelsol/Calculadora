@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body class="bg-[#E7CCCC] min-h-screen flex justify-center items-center">
+    <!-- Inicio calculadora -->
+    <div
+      class="w-100 p-4 font-semibold rounded-lg shadow-lg bg-[url(/imagens/fundo.png)] bg-cover bg-center"
+    >
+      <div
+        id="display"
+        class="w-full inset-shadow-sm inset-shadow-gray-950/50 bg-gray-500/30 text-white text-right text-4xl p-6 flex items-center justify-end rounded"
+      >
+        0
+      </div>
+      <!-- Botões -->
+
+      <!-- linha 1 -->
+      <div class="w-full flex pt-4 gap-2">
+        <button
+          class="w-1/4 bg-[#FF5FCF] text-white rounded p-3 font-bold hover:bg-[#FF8FE3]"
+          id="resto"
+          value="%"
+        >
+          %
+        </button>
+        <button
+          class="w-2/4 bg-[#B7B1F2] text-white rounded py-3 px-18 font-semibold hover:bg-[#C6C1F9]"
+          id="limpar"
+          value="c"
+        >
+          C
+        </button>
+        <button
+          class="w-1/4 bg-slate-500/60 text-white rounded p-3 hover:bg-slate-600/75"
+          id="backspace"
+          value="backspace"
+        >
+          <i class="bi bi-backspace"></i>
+        </button>
+      </div>
+
+      <!-- linha 2 -->
+      <div class="w-full flex pt-2 gap-2">
+        <button
+          class="w-1/4 bg-slate-700/60 text-white rounded p-3 hover:bg-slate-600/75"
+          id="sete"
+          value="7"
+        >
+          7
+        </button>
+        <button
+          class="w-1/4 bg-slate-700/60 text-white rounded p-3 hover:bg-slate-600/75"
+          id="oito"
+          value="8"
+        >
+          8
+        </button>
+        <button
+          class="w-1/4 bg-slate-700/60 text-white rounded p-3 hover:bg-slate-600/75"
+          id="nove"
+          value="9"
+        >
+          9
+        </button>
+
+        <!-- linha 2 -->
+        <button
+          class="w-1/4 bg-[#FF5FCF] text-white rounded font-bold text-2xl p-2 hover:bg-[#FF8FE3]"
+          id="divisao"
+          value="/"
+        >
+          ÷
+        </button>
+      </div>
+
+      <!-- linha 3 -->
+      <div class="w-full flex pt-2 gap-2">
+        <button
+          class="w-1/4 bg-slate-700/60 text-white rounded p-3 hover:bg-slate-600/75"
+          id="quatro"
+          value="4"
+        >
+          4
+        </button>
+        <button
+          class="w-1/4 bg-slate-700/60 text-white rounded p-3 hover:bg-slate-600/75"
+          id="cinco"
+          value="5"
+        >
+          5
+        </button>
+        <button
+          class="w-1/4 bg-slate-700/60 text-white rounded p-3 hover:bg-slate-600/75"
+          id="seis"
+          value="6"
+        >
+          6
+        </button>
+
+        <button
+          class="w-1/4 bg-[#FF5FCF] text-white rounded font-semibold text-2xl p-2 hover:bg-[#FF8FE3]"
+          id="multiplicacao"
+          value="*"
+        >
+          x
+        </button>
+      </div>
+
+      <!-- linha 4 -->
+      <div class="w-full flex pt-2 gap-2">
+        <button
+          class="w-1/4 bg-slate-700/60 text-white rounded p-3 hover:bg-slate-600/75"
+          id="um"
+          value="1"
+        >
+          1
+        </button>
+        <button
+          class="w-1/4 bg-slate-700/60 text-white rounded p-3 hover:bg-slate-600/75"
+          id="dois"
+          value="2"
+        >
+          2
+        </button>
+        <button
+          class="w-1/4 bg-slate-700/60 text-white rounded p-3 hover:bg-slate-600/75"
+          id="tres"
+          value="3"
+        >
+          3
+        </button>
+
+        <button
+          class="w-1/4 bg-[#FF5FCF] text-white rounded font-bold text-2xl p-2 hover:bg-[#FF8FE3]"
+          id="quatro"
+          value="-"
+        >
+          -
+        </button>
+      </div>
+
+      <!-- linha 5 -->
+      <div class="w-full flex pt-2 gap-2">
+        <button
+          class="w-2/4 bg-slate-700/60 text-white rounded py-3 px-18 hover:bg-slate-600/75"
+          id="zero"
+          value="0"
+        >
+          0
+        </button>
+        <button
+          class="w-1/4 bg-slate-700/60 text-white rounded p-3 hover:bg-slate-600/75"
+          id="ponto"
+          value="."
+        >
+          .
+        </button>
+        <button
+          class="w-1/4 bg-[#FF5FCF] text-white rounded font-bold text-2xl p-2 hover:bg-[#FF8FE3]"
+          id="soma"
+          value="+"
+        >
+          +
+        </button>
+      </div>
+
+      <!-- linha 6 -->
+      <div class="w-full flex pt-2 gap-2">
+        <button
+          class="w-4/4 bg-[#86CEFA] text-white rounded font-bold text-2xl p-2 hover:bg-[#AEDEFC]"
+          id="igual"
+          value="="
+        >
+          =
+        </button>
+      </div>
+    </div>
+
+    <script src="configurando.js"></script>
+  </body>
+</html>
